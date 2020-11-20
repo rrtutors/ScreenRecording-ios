@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BHd-wf-k7t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="yJ6-I5-pce">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BHd-wf-k7t" customClass="ViewController" customModule="Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zvb-zZ-sac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40S-Bt-LV3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Video" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1v-C5-hlQ">
+                                        <rect key="frame" x="100" y="40" width="172" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="28G-Pu-wTx"/>
+                                            <constraint firstAttribute="width" constant="172" id="jHu-yi-Tc7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtF-5V-Esa">
+                                        <rect key="frame" x="327" y="35" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SJx-ZW-em7"/>
+                                            <constraint firstAttribute="width" constant="40" id="VWv-Ex-Pf1"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.36078431370000003" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CtF-5V-Esa" firstAttribute="leading" secondItem="O1v-C5-hlQ" secondAttribute="trailing" constant="55" id="3aA-CE-agb"/>
+                                    <constraint firstItem="CtF-5V-Esa" firstAttribute="top" secondItem="40S-Bt-LV3" secondAttribute="top" constant="35" id="4Lg-Gr-FgT"/>
+                                    <constraint firstItem="O1v-C5-hlQ" firstAttribute="top" secondItem="40S-Bt-LV3" secondAttribute="top" constant="40" id="M1i-7P-IGe"/>
+                                    <constraint firstAttribute="trailing" secondItem="CtF-5V-Esa" secondAttribute="trailing" constant="8" id="Tky-gR-oM4"/>
+                                    <constraint firstAttribute="height" constant="85" id="p0y-qj-Ou1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="HwR-iS-Vzm" customClass="AAPlayer" customModule="SampleVideo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="85" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HwR-iS-Vzm" secondAttribute="height" multiplier="16:9" id="CCc-6v-CVI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HwR-iS-Vzm" firstAttribute="top" secondItem="40S-Bt-LV3" secondAttribute="bottom" id="MHg-Wr-N7G"/>
+                            <constraint firstItem="HwR-iS-Vzm" firstAttribute="leading" secondItem="j39-3g-Poa" secondAttribute="leading" id="Qxx-hs-Prm"/>
+                            <constraint firstItem="40S-Bt-LV3" firstAttribute="leading" secondItem="j39-3g-Poa" secondAttribute="leading" id="ULh-AD-KNp"/>
+                            <constraint firstItem="40S-Bt-LV3" firstAttribute="trailing" secondItem="j39-3g-Poa" secondAttribute="trailing" id="VEU-jW-oee"/>
+                            <constraint firstItem="HwR-iS-Vzm" firstAttribute="trailing" secondItem="j39-3g-Poa" secondAttribute="trailing" id="Xnb-EE-8r4"/>
+                            <constraint firstItem="40S-Bt-LV3" firstAttribute="top" secondItem="zvb-zZ-sac" secondAttribute="top" id="vYn-Lg-BpV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j39-3g-Poa"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="800"/>
+                    <connections>
+                        <outlet property="vedioDisplay" destination="HwR-iS-Vzm" id="QhE-Gj-sOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Z6-yU-wLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6383" y="-5998"/>
+        </scene>
+    </scenes>
+</document>
